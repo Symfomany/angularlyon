@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Page Two</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-range [(ngModel)]="brightness">
+            <ion-icon range-left small name="sunny"></ion-icon>
+            <ion-icon range-right name="sunny"></ion-icon>
+        </ion-range>
+    </ion-item>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Gaming</ion-label>
+            <ion-select [(ngModel)]="gaming">
+                <ion-option value="nes">NES</ion-option>
+                <ion-option value="n64">Nintendo64</ion-option>
+                <ion-option value="ps">PlayStation</ion-option>
+                <ion-option value="genesis">Sega Genesis</ion-option>
+                <ion-option value="saturn">Sega Saturn</ion-option>
+                <ion-option value="snes">SNES</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+
+    <ion-slides pager>
+
+        <ion-slide style="background-color: green">
+            <h2>Slide 1</h2>
+        </ion-slide>
+
+        <ion-slide style="background-color: blue">
+            <h2>Slide 2</h2>
+        </ion-slide>
+
+        <ion-slide style="background-color: red">
+            <h2>Slide 3</h2>
+        </ion-slide>
+
+    </ion-slides>
+
+    <ion-list>
+        <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <ion-icon [name]="item.icon" item-left></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>
+    </button>
+    </ion-list>
+    <div *ngIf="selectedItem" padding>
+        You navigated here from <b>{{selectedItem.title}}</b>
+    </div>
+</ion-content>

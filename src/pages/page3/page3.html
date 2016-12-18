@@ -1,0 +1,92 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title>Page Three</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-tabs>
+        <ion-tab tabIcon="water" tabTitle="Water" [root]="tab1"></ion-tab>
+        <ion-tab tabIcon="leaf" tabTitle="Life" [root]="tab2"></ion-tab>
+        <ion-tab tabIcon="flame" tabTitle="Fire" [root]="tab3"></ion-tab>
+        <ion-tab tabIcon="magnet" tabTitle="Force" [root]="tab4"></ion-tab>
+    </ion-tabs>
+
+    <ion-item>
+        <ion-label> Sam</ion-label>
+        <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+
+    <ion-list>
+        <ion-item>
+            <ion-label>Gaming</ion-label>
+            <ion-select [(ngModel)]="gaming">
+                <ion-option value="nes">NES</ion-option>
+                <ion-option value="n64">Nintendo64</ion-option>
+                <ion-option value="ps">PlayStation</ion-option>
+                <ion-option value="genesis">Sega Genesis</ion-option>
+                <ion-option value="saturn">Sega Saturn</ion-option>
+                <ion-option value="snes">SNES</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+
+    <ion-item>
+        <ion-label>Start Time</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+    </ion-item>
+
+    <ion-card class="cards-list-demo card card-ios">
+        <ion-card-header class="card-header card-header-ios">
+            Explore Nearby
+        </ion-card-header>
+
+        <ion-list class="list list-ios">
+            <button class="item item-block item-ios activated" ion-item=""><ion-icon item-left="" name="cart" role="img" class="icon icon-ios ion-ios-cart item-icon" aria-label="cart"></ion-icon><div class="item-inner"><div class="input-wrapper"><!--template bindings={}--><ion-label class="label label-ios">
+        
+        Shopping
+      </ion-label></div><!--template bindings={}--></div><div class="button-effect"></div></button>
+
+            <button class="item item-block item-ios" ion-item=""><ion-icon item-left="" name="medical" role="img" class="icon icon-ios ion-ios-medical item-icon" aria-label="medical"></ion-icon><div class="item-inner"><div class="input-wrapper"><!--template bindings={}--><ion-label class="label label-ios">
+        
+        Hospital
+      </ion-label></div><!--template bindings={}--></div><div class="button-effect"></div></button>
+
+            <button class="item item-block item-ios" ion-item=""><ion-icon item-left="" name="cafe" role="img" class="icon icon-ios ion-ios-cafe item-icon" aria-label="cafe"></ion-icon><div class="item-inner"><div class="input-wrapper"><!--template bindings={}--><ion-label class="label label-ios">
+        
+        Cafe
+      </ion-label></div><!--template bindings={}--></div><div class="button-effect"></div></button>
+
+            <button class="item item-block item-ios" ion-item=""><ion-icon item-left="" name="paw" role="img" class="icon icon-ios ion-ios-paw item-icon" aria-label="paw"></ion-icon><div class="item-inner"><div class="input-wrapper"><!--template bindings={}--><ion-label class="label label-ios">
+        
+        Dog Park
+      </ion-label></div><!--template bindings={}--></div><div class="button-effect"></div></button>
+
+            <button class="item item-block item-ios" ion-item=""><ion-icon item-left="" name="beer" role="img" class="icon icon-ios ion-ios-beer item-icon" aria-label="beer"></ion-icon><div class="item-inner"><div class="input-wrapper"><!--template bindings={}--><ion-label class="label label-ios">
+        
+        Pub
+      </ion-label></div><!--template bindings={}--></div><div class="button-effect"></div></button>
+
+            <button class="item item-block item-ios" ion-item=""><ion-icon item-left="" name="planet" role="img" class="icon icon-ios ion-ios-planet item-icon" aria-label="planet"></ion-icon><div class="item-inner"><div class="input-wrapper"><!--template bindings={}--><ion-label class="label label-ios">
+        
+        Space
+      </ion-label></div><!--template bindings={}--></div><div class="button-effect"></div></button>
+
+        </ion-list>
+    </ion-card>
+
+    <ion-fab right bottom>
+        <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+        <ion-fab-list side="left">
+            <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+        </ion-fab-list>
+    </ion-fab>
+
+</ion-content>
